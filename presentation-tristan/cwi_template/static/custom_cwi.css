@@ -1,0 +1,129 @@
+/* Overrides of notebook CSS for static HTML export */
+:root {
+  --color-1: #cd003a;
+  --color-2: #00493d;
+  --logo: url("cwi_logo.png");
+  --font: verdana-bold;
+  --pointer: url('red_32.png');
+}
+body { /* Change the logo urls in the line after if needed */
+    background: var(--logo) !important;
+    background-size: 20% !important;
+    background-position: 1% -2% !important;
+    background-repeat: no-repeat !important;
+}
+.reveal {
+  font-size: 160%;
+}
+.reveal pre {
+  width: inherit;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: var(--font);
+  font-size: 80%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.reveal pre code {
+  padding: 0px;
+}
+.reveal section img {
+  border: 0px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+.reveal img {
+  height: 400px;
+  width: auto;
+}
+
+.reveal h1 {
+  text-transform: none;
+  font-family: var(--font);
+  font-style: normal;
+  font-size: 36px;
+  color: var(--color-1);
+}
+
+.reveal h2 {
+  text-transform: none;
+  font-family: var(--font);
+  font-style: normal;
+  font-size: 28px;
+}
+.reveal p {
+  font-family: var(--font);
+  font-size: 20px;
+}
+.reveal .slides {
+  text-align: left;
+}
+.reveal .fade {
+  opacity: 1;
+}
+.reveal .slide-number {
+  color: var(--color-1);
+}
+
+.reveal .progress {
+  height: 15px;
+}
+
+div.jp-InputArea-editor {
+  padding: 0.06em;
+}
+
+div.code_cell {
+  background-color: transparent;
+}
+
+div.output_area pre {
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+}
+
+div.jp-OutputPrompt {
+  /* 5px right shift to account for margin in parent container */
+  margin: 5px 5px 0 0;
+}
+
+div.jp-InputArea {
+  margin: 5px 5px 0 0;
+}
+
+.reveal {
+  cursor: var(--pointer), crosshair;
+}
+
+.reveal .controls .navigate-left {
+    /* right: 6.4em;
+    bottom: 3.2em; */
+    color: var(--color-1);
+    /* -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); */
+}
+
+.reveal .controls .navigate-right {
+    /* right: 0em;
+    bottom: 3.2em; */
+    color: var(--color-1);
+    /* -webkit-transform: translateX(10px);
+            transform: translateX(10px); */
+}
+
+.reveal .controls .navigate-up {
+    /* right: 3.2em;
+    bottom: 6.4em; */
+    color: var(--color-1);
+    /* -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); */
+}
+
+.reveal .controls .navigate-down {
+    /* right: 3.2em;
+    bottom: -1.4em; */
+    color: var(--color-1);
+    /* -webkit-transform: translateY(10px);
+            transform: translateY(10px); */
+}
+.reveal .progress span {
+  background: var(--color-1) !important;
+}
