@@ -14501,14 +14501,15 @@ we want to study how well it approximates an underlying clean image $F$.</p>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It is often usefull to think of the error</p>
+<p>It is often usefull to think of the error in terms of the bias and variance:
+$$\mathcal{D}\bigl(\mathcal{R}(F^\delta),F\bigr) \leq \underbrace{\mathcal{D}\bigl(\mathcal{R}(F),F\bigr)}_{\text{bias}} + \underbrace{\mathcal{D}\bigl(\mathcal{R}(F^\delta),\mathcal{R}(F)\bigr)}_{\text{variance}}.$$</p>
 
 </div>
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Filtering-and-smoothing">Filtering and smoothing<a class="anchor-link" href="#Filtering-and-smoothing">&#182;</a></h2><ul>
-<li>Local smoothing</li>
+<li>Local (Gaussian) smoothing</li>
 <li>Median filtering</li>
 <li>Frequency-domain filtering</li>
 </ul>
@@ -14517,7 +14518,18 @@ we want to study how well it approximates an underlying clean image $F$.</p>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>examples</p>
+<p><strong>Local (Gaussian) smoothing:</strong></p>
+<ul>
+<li>Noise fluctuates on a pixel-by-pixel basis, while the underlying image is highly correlated</li>
+<li>This motivates local smoothing $$\widetilde{F}_{ij} = \sum_{k\ell} G_{|i-k|,|j-\ell|} F_{k\ell}^\delta$$</li>
+<li>For example $G_{pq} = c\cdot \exp(-(\alpha p^2 + \beta q^2) )$</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="&#39;./figures/gaussian-smoothing.png&#39;" alt=""></p>
 
 </div>
 </div></section><section>
