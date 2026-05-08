@@ -14438,7 +14438,7 @@ div.jp-InputArea {
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>example of discrete images and different ways of stacking it in a vector</p>
+<p><img src="./figures/circles.png" alt=""></p>
 
 </div>
 </div></section><section>
@@ -14447,14 +14447,22 @@ div.jp-InputArea {
 <h2 id="Types-of-noise">Types of noise<a class="anchor-link" href="#Types-of-noise">&#182;</a></h2><ul>
 <li>We can think of noise as any feature in the image that diminishes its scientific usefulness</li>
 <li>This could include measurement noise, distortions, pre-processing artifacts, quantization, ...</li>
-<li>We will focus mostly on noise that can be modelled stochastically, in which case we can (often) model noise through a probality distribution and an underlying "clean" image.</li>
+<li>We will focus on noise that can be modelled stochastically, as perturbation of underlying "clean" image.</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>example of different types of random noise</p>
+<p><strong>Additive Gaussian noise:</strong></p>
+$$f_i\sim N (\overline{f}_i,\sigma^2)$$<p><strong>Poisson noise:</strong></p>
+$$f\sim P(\overline{f}_i)$$<p><strong>Salt-and-Pepper:</strong></p>
+$$f_i = \begin{cases} 0 &amp; \text{with probability } p/2 \\ 1 &amp; \text{with probability } p/2\\ \overline{f}_i &amp; \text{with probability } 1-p \end{cases}$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="./figures/noisy-images.png" alt=""></p>
 
 </div>
 </div></section><section>
@@ -14471,16 +14479,14 @@ div.jp-InputArea {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>examples of metrics</p>
+<p><img src="./figures/image-metrics.png" alt=""></p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Getting-rid-of-noise">Getting rid of noise<a class="anchor-link" href="#Getting-rid-of-noise">&#182;</a></h1><blockquote><p><em>Getting rid of noise is easy, it's keeping the useful bits that is hard.</em></p>
-<ul>
-<li>...</li>
-</ul>
+<p>- This lecture</p>
 </blockquote>
 
 </div>
