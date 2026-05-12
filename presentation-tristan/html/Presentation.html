@@ -14462,7 +14462,13 @@ $$f_i = \begin{cases} 0 &amp; \text{with probability } p/2 \\ 1 &amp; \text{with
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="./figures/noisy-images.png" alt=""></p>
+<p><img src="./figures/noisy-line-profiles.png" alt=""></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="&#39;./figures/noisy-line-profiles.png&#39;" alt=""></p>
 
 </div>
 </div></section><section>
@@ -14559,7 +14565,7 @@ Convolution in the spatial domain is equivalent to multiplication in the Fourier
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14744,6 +14750,7 @@ Convolution in the spatial domain is equivalent to multiplication in the Fourier
 
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./figures/fourier-smoothing.png&#39;</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14784,13 +14791,33 @@ Convolution in the spatial domain is equivalent to multiplication in the Fourier
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Transform-domain-tresholding">Transform-domain tresholding<a class="anchor-link" href="#Transform-domain-tresholding">&#182;</a></h2><p>So far, we have treated image in the natural pixel-basis</p>
+<h2 id="Transform-domain-methods">Transform-domain methods<a class="anchor-link" href="#Transform-domain-methods">&#182;</a></h2><p>So far, we have treated image in the natural pixel-basis and the Fourier basis. We have also seen both linear and non-linear filters. These ideas can be extended to transform-domain filters.</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>examles</p>
+<p><strong>Wavelet transform</strong></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Singular value decomposition</strong></p>
 
 </div>
 </div></section><section>
@@ -14819,13 +14846,9 @@ The trick is to find the "right" value for $\lambda$.</p>
 <h2 id="Beyond">Beyond<a class="anchor-link" href="#Beyond">&#182;</a></h2><ul>
 <li>Patches</li>
 <li>Dictionary learning</li>
+<li>Deep learning</li>
+<li>...</li>
 </ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>example with patches / dictionary learning</p>
 
 </div>
 </div></section></section>
