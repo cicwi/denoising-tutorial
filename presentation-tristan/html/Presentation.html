@@ -7497,7 +7497,7 @@ div.jp-InputArea {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<img alt="circles" src="./figures/circles.png" width="800px"/>
+<img alt="circles" src="./figures/circles.png" width="100px"/>
 </div>
 </div>
 </div>
@@ -7659,7 +7659,10 @@ $$\mathcal{D}\bigl(\mathcal{R}(F^\delta),F\bigr) \leq \underbrace{\mathcal{D}\bi
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Median filter</strong></p>
-<p>A disadvantage of the previous approach is that it also smoothes out edges in the image. An alternative method is the <em>median filter</em>, which replaces the value in each pixel with the median of its neighborhood (in stead of the weighted mean).</p>
+<ul>
+<li>A disadvantage of the previous approach is that it also smoothes out edges in the image.</li>
+<li>An alternative method is the <em>median filter</em>, which replaces the value in each pixel with the median of its neighborhood (in stead of the weighted mean).</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7683,11 +7686,10 @@ $$\mathcal{D}\bigl(\mathcal{R}(F^\delta),F\bigr) \leq \underbrace{\mathcal{D}\bi
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Fourier domain</strong>
 An alternative view on the Gaussian filter is to consider it as weighting in the Fourier domain:</p>
-<blockquote>
-<p><strong>Convolution theorem:</strong>
-Convolution in the spatial domain is equivalent to multiplication in the Fourier domain</p>
-</blockquote>
-<p>This enables to efficiently filter large images with a wide variety of filters.</p>
+<ul>
+<li>Convolution in the spatial domain is equivalent to multiplication in the Fourier domain</li>
+<li>This enables to efficiently filter large images with a wide variety of filters.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7709,7 +7711,11 @@ Convolution in the spatial domain is equivalent to multiplication in the Fourier
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Transform-domain-methods">Transform-domain methods<a class="anchor-link" href="#Transform-domain-methods">¶</a></h2><p>So far, we have treated image in the natural pixel-basis and the Fourier basis. We have also seen both linear and non-linear filters. These ideas can be extended to transform-domain filters.</p>
+<h2 id="Transform-domain-methods">Transform-domain methods<a class="anchor-link" href="#Transform-domain-methods">¶</a></h2><ul>
+<li>So far, we have treated image in the natural pixel-basis and the Fourier basis.</li>
+<li>We have also seen both linear and non-linear filters.</li>
+<li>These ideas can be extended to transform-domain filters.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7729,7 +7735,7 @@ Convolution in the spatial domain is equivalent to multiplication in the Fourier
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7778,7 +7784,7 @@ Convolution in the spatial domain is equivalent to multiplication in the Fourier
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7807,9 +7813,11 @@ Convolution in the spatial domain is equivalent to multiplication in the Fourier
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Variational-denoising">Variational denoising<a class="anchor-link" href="#Variational-denoising">¶</a></h2><p>Explicitly model the trade-off between bias and variance, and minimize it:
-$$\min_{F} \mathcal{D}(F,F^\delta) + \lambda \mathcal{R}(F),$$
-where $\mathcal{D}$ compares images (bias) and $\mathcal{R}$ tells you how "noisy" it is (variance).</p>
+<h2 id="Variational-denoising">Variational denoising<a class="anchor-link" href="#Variational-denoising">¶</a></h2><ul>
+<li>Explicitly model the trade-off between bias and variance, and minimize it:
+$$\min_{F} \mathcal{D}(F,F^\delta) + \lambda \mathcal{R}(F),$$</li>
+<li>Here $\mathcal{D}$ compares images (bias) and $\mathcal{R}$ tells you how "noisy" it is (variance).</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7821,7 +7829,7 @@ where $\mathcal{D}$ compares images (bias) and $\mathcal{R}$ tells you how "nois
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>solving them may not be trivial (contact your local mathematician)</li>
+<li>solving them may not be trivial (contact your local mathematician :) )</li>
 <li>most algorithms solve iteratively, and contain algorithmic parameters that need to be chosen carefully</li>
 <li>care needs to be taken when picking $\lambda$</li>
 </ul>
