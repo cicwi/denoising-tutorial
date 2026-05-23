@@ -29,10 +29,10 @@ body { /* Change the logo urls in the line after if needed */
 .reveal section img {
   border: 0px solid black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal img {
-  height: 400px;
+  height: auto;
+  max-height: 400px;
   width: auto;
+  max-width: 100%;
 }
 
 .reveal h1 {
