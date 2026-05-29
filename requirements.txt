@@ -1,0 +1,5 @@
+scikit-image
+jupyter
+matplotlib
+scipy
+PyWavelets

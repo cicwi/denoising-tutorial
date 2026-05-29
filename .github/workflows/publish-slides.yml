@@ -1,0 +1,65 @@
+name: Publish slides
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - presentation-tristan/**
+      - .github/workflows/publish-slides.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build slides
+        working-directory: presentation-tristan
+        run: |
+          rm -rf html
+          mkdir -p html
+          jupyter nbconvert --to slides Presentation.ipynb --template=./cwi_template
+          mv Presentation.slides.html html/Presentation.html
+          cp cwi_template/static/cwi_logo.png cwi_template/static/red_32.png html/
+          cp -r figures html/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: presentation-tristan/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
